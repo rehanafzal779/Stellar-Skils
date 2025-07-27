@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Stellar Skills | Robotics Education for Kids</title>
+    <meta name="description" content="Transparent and affordable pricing for our robotics courses. Choose from beginner, intermediate, and advanced packages.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+         :root {
+            --primary-dark: #0B0B0B;
+            --accent-light: #E8E6E4;
+            --main-brown: #8E7260;
+            --muted-gray: #A29891;
+            --highlight-beige: #D6C4B6;
+            --text-light: #E8E6E4;
+            --text-dark: #0B0B0B;
+            --section-padding: 100px 0;
+        }
+        
+        .light-mode {
+            --primary-dark: #f8f9fa;
+            --accent-light: #343a40;
+            --main-brown: #8E7260;
+            --muted-gray: #6c757d;
+            --highlight-beige: #D6C4B6;
+            --text-light: #343a40;
+            --text-dark: #343a40;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color 0.5s, color 0.5s;
+            padding-top: 80px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        /* Header Styles */
+        
+        header {
+            background-color: rgba(11, 11, 11, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(142, 114, 96, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .light-mode header {
+            background-color: rgba(248, 249, 250, 0.95);
+            border-bottom: 1px solid rgba(142, 114, 96, 0.2);
+        }
+        
+        header.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo img {
+            height: 45px;
+            margin-right: 12px;
+            transition: transform 0.3s;
+        }
+        
+        .logo:hover img {
+            transform: rotate(15deg);
+        }
+        
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            background: linear-gradient(to right, var(--main-brown), var(--highlight-beige));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 35px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s;
+            position: relative;
+            display: inline-block;
+        }
+        
+        nav ul li a:hover {
+            color: var(--main-brown);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--main-brown);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        nav ul li a.active {
+            color: var(--main-brown);
+        }
+        
+        nav ul li a.active::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: color 0.3s;
+            z-index: 1001;
+        }
+        
+        .mobile-menu-btn:hover {
+            color: var(--main-brown);
+        }
+        /* Page Header */
+        
+        .page-header {
+            height: 60vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(11, 11, 11, 0.85), rgba(11, 11, 11, 0.7)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+        }
+        
+        .light-mode .page-header {
+            background: linear-gradient(rgba(248, 249, 250, 0.85), rgba(248, 249, 250, 0.7)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(142, 114, 96, 0.2) 0%, transparent 50%);
+            z-index: 1;
+        }
+        
+        .page-header-content {
+            max-width: 900px;
+            padding: 0 30px;
+            z-index: 2;
+            position: relative;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.8rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 600;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-header h1 span {
+            color: var(--main-brown);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .page-header h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background-color: rgba(142, 114, 96, 0.3);
+            z-index: -1;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: var(--muted-gray);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .breadcrumb a {
+            color: var(--muted-gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--main-brown);
+        }
+        
+        .breadcrumb span {
+            margin: 0 10px;
+            color: var(--muted-gray);
+        }
+        
+        .breadcrumb .current {
+            color: var(--main-brown);
+            font-weight: 500;
+        }
+        /* Pricing Section */
+        
+        .pricing {
+            padding: var(--section-padding);
+            background-color: var(--primary-dark);
+            position: relative;
+        }
+        
+        .pricing::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            opacity: 0.03;
+        }
+        
+        .pricing .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-title {
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--text-light);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title.light h2 {
+            color: var(--text-light);
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--main-brown);
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+        
+        .section-title.center h2 {
+            text-align: center;
+        }
+        
+        .section-title.center h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title p {
+            color: var(--muted-gray);
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .pricing-card {
+            background-color: rgba(214, 196, 182, 0.1);
+            border-radius: 15px;
+            padding: 50px 40px;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(142, 114, 96, 0.2);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            background-color: rgba(214, 196, 182, 0.15);
+            border-color: rgba(142, 114, 96, 0.4);
+        }
+        
+        .pricing-card.popular {
+            border: 2px solid var(--main-brown);
+        }
+        
+        .pricing-card.popular::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: 20px;
+            right: -40px;
+            background-color: var(--main-brown);
+            color: var(--text-light);
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .pricing-tier {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--main-brown);
+            margin-bottom: 30px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .pricing-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--muted-gray);
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+        
+        .pricing-features li {
+            margin-bottom: 15px;
+            color: var(--muted-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .pricing-features li i {
+            color: var(--main-brown);
+            margin-right: 10px;
+        }
+        
+        .money-back {
+            font-size: 0.9rem;
+            color: var(--muted-gray);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.05rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn i {
+            margin-left: 8px;
+            transition: transform 0.3s;
+        }
+        
+        .btn-primary {
+            background-color: var(--main-brown);
+            color: var(--text-light);
+            border: 2px solid var(--main-brown);
+        }
+        
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--main-brown);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(142, 114, 96, 0.3);
+        }
+        
+        .btn-primary:hover i {
+            transform: translateX(5px);
+        }
+        /* About Section */
+        
+        .about {
+            padding: var(--section-padding);
+            background-color: var(--highlight-beige);
+            color: var(--text-dark);
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .about-feature {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .feature-icon {
+            font-size: 1.8rem;
+            color: var(--main-brown);
+        }
+        
+        .feature-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+        
+        .feature-content p {
+            color: var(--text-dark);
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        /* Vision Section */
+        
+        .vision {
+            padding: var(--section-padding);
+            background: linear-gradient(rgba(142, 114, 96, 0.9), rgba(11, 11, 11, 0.9)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            color: var(--text-light);
+            text-align: center;
+        }
+        
+        .light-mode .vision {
+            background: linear-gradient(rgba(142, 114, 96, 0.9), rgba(248, 249, 250, 0.9)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+        }
+        
+        .vision-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .vision h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .vision p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: var(--muted-gray);
+        }
+        /* Mission Section */
+        
+        .mission {
+            padding: var(--section-padding);
+            background-color: var(--primary-dark);
+            position: relative;
+        }
+        
+        .mission::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            opacity: 0.03;
+            z-index: 1;
+        }
+        
+        .mission .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .mission-card {
+            background-color: rgba(214, 196, 182, 0.1);
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(142, 114, 96, 0.2);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+        
+        .mission-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            background-color: rgba(214, 196, 182, 0.15);
+            border-color: rgba(142, 114, 96, 0.4);
+        }
+        
+        .mission-icon {
+            font-size: 2.5rem;
+            color: var(--main-brown);
+            margin-bottom: 25px;
+        }
+        
+        .mission-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-light);
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .mission-card p {
+            color: var(--muted-gray);
+            line-height: 1.7;
+        }
+        /* Automation Section */
+        
+        .automation {
+            padding: var(--section-padding);
+            background-color: var(--highlight-beige);
+            color: var(--text-dark);
+        }
+        
+        .automation-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .automation-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .automation-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .automation-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .automation-features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .automation-feature {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .automation-icon {
+            font-size: 1.8rem;
+            color: var(--main-brown);
+        }
+        
+        .automation-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+        
+        .automation-content p {
+            color: var(--text-dark);
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        /* CTA Section */
+        
+        .cta-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, rgba(142, 114, 96, 0.95), rgba(11, 11, 11, 0.95)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80') no-repeat center center/cover;
+            text-align: center;
+            color: var(--text-light);
+            position: relative;
+        }
+        
+        .light-mode .cta-section {
+            background: linear-gradient(135deg, rgba(142, 114, 96, 0.95), rgba(248, 249, 250, 0.95)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80') no-repeat center center/cover;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 0%, rgba(11, 11, 11, 0.7) 100%);
+        }
+        
+        .cta-section .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+        
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.2rem;
+            color: var(--muted-gray);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .cta-buttons.center {
+            justify-content: center;
+        }
+        /* Footer */
+        
+        footer {
+            background-color: var(--primary-dark);
+            padding: 80px 0 20px;
+            border-top: 1px solid rgba(142, 114, 96, 0.2);
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            opacity: 0.02;
+            z-index: 1;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .footer-column h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: var(--main-brown);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background-color: var(--main-brown);
+            bottom: -8px;
+            left: 0;
+        }
+        
+        .footer-column p {
+            color: var(--muted-gray);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-column ul li a {
+            color: var(--muted-gray);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--main-brown);
+            transform: translateX(5px);
+        }
+        
+        .footer-column ul li i {
+            margin-right: 10px;
+            color: var(--main-brown);
+            width: 20px;
+            text-align: center;
+        }
+        
+        .newsletter-form {
+            margin-top: 20px;
+            position: relative;
+        }
+        
+        .newsletter-form input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid var(--muted-gray);
+            background-color: transparent;
+            color: var(--text-light);
+            border-radius: 50px;
+            outline: none;
+            transition: all 0.3s;
+        }
+        
+        .newsletter-form input:focus {
+            border-color: var(--main-brown);
+            box-shadow: 0 0 0 3px rgba(142, 114, 96, 0.3);
+        }
+        
+        .newsletter-form button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            padding: 0 20px;
+            height: calc(100% - 10px);
+            background-color: var(--main-brown);
+            color: var(--text-light);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .newsletter-form button:hover {
+            background-color: var(--primary-dark);
+            color: var(--main-brown);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(142, 114, 96, 0.1);
+            color: var(--muted-gray);
+            border-radius: 50%;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--main-brown);
+            color: var(--text-light);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(142, 114, 96, 0.3);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(142, 114, 96, 0.1);
+            color: var(--muted-gray);
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: var(--muted-gray);
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--main-brown);
+        }
+        /* Floating CTA */
+        
+        .floating-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--main-brown);
+            color: var(--text-light);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 25px rgba(142, 114, 96, 0.5);
+            z-index: 999;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(142, 114, 96, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(142, 114, 96, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(142, 114, 96, 0);
+            }
+        }
+        
+        .floating-cta:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 8px 30px rgba(142, 114, 96, 0.8);
+            animation: none;
+        }
+        /* Back to Top Button */
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 120px;
+            right: 30px;
+            background-color: var(--primary-dark);
+            color: var(--main-brown);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            cursor: pointer;
+            transition: all 0.3s;
+            opacity: 0;
+            visibility: hidden;
+            border: 1px solid var(--main-brown);
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--main-brown);
+            color: var(--text-light);
+            transform: translateY(-5px);
+        }
+        /* Theme Toggle Button */
+        
+        #themeToggle {
+            position: fixed;
+            bottom: 190px;
+            right: 30px;
+            z-index: 999;
+            background-color: var(--main-brown);
+            color: var(--text-light);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+        
+        #themeToggle:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(142, 114, 96, 0.4);
+        }
+        /* Mobile Styles */
+        
+        @media (max-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+            .about-container,
+            .automation-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 20px;
+            }
+            nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: var(--primary-dark);
+                padding: 100px 30px 30px;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                z-index: 999;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            nav.active {
+                transform: translateX(0);
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 20px 0;
+            }
+            nav ul li a {
+                font-size: 1.3rem;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            .page-header p {
+                font-size: 1.1rem;
+            }
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            .mission-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Animation Classes */
+        
+        [data-aos="fade-up"] {
+            transform: translateY(30px);
+            opacity: 0;
+            transition-property: transform, opacity;
+        }
+        
+        [data-aos="fade-up"].aos-animate {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        [data-aos="fade-left"] {
+            transform: translateX(-30px);
+            opacity: 0;
+            transition-property: transform, opacity;
+        }
+        
+        [data-aos="fade-left"].aos-animate {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        [data-aos="fade-right"] {
+            transform: translateX(30px);
+            opacity: 0;
+            transition-property: transform, opacity;
+        }
+        
+        [data-aos="fade-right"].aos-animate {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        [data-aos="zoom-in"] {
+            transform: scale(0.9);
+            opacity: 0;
+            transition-property: transform, opacity;
+        }
+        
+        [data-aos="zoom-in"].aos-animate {
+            transform: scale(1);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="mainHeader">
+        <div class="header-container container">
+            <a href="index.html" class="logo">
+                <img src="Logo (2).png" alt="Stellar Skills Logo">
+                <h1>Stellar Skills</h1>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="pricing.html" class="active">Pricing</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="tel:+923265011116" class="cta-link"><i class="fas fa-phone"></i> Need Help?</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content container" data-aos="fade-up">
+            <div class="breadcrumb" data-aos="fade-up" data-aos-delay="100">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span class="current">Pricing</span>
+            </div>
+            <h1 data-aos="fade-up" data-aos-delay="200">Transparent and <span>Affordable</span> Pricing</h1>
+            <p data-aos="fade-up" data-aos-delay="300">Our courses are designed to be accessible, offering clear and affordable pricing for all students. No hidden fees—just quality education that fits your budget.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <div class="section-title center">
+                <h2>Pricing Table</h2>
+                <p>Choose the perfect plan for your child's robotics education journey</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Beginner Plan -->
+                <div class="pricing-card" data-aos="fade-up">
+                    <div class="pricing-tier">Beginner</div>
+                    <div class="pricing-price">PKR 20,000</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Access to Basic Courses</li>
+                        <li><i class="fas fa-check"></i> Monthly Updates</li>
+                        <li><i class="fas fa-check"></i> Self-paced Learning</li>
+                        <li><i class="fas fa-times"></i> No Certifications Included</li>
+                    </ul>
+                    <div class="money-back">14 Days Money Guarantee</div>
+                    <a href="#" class="btn btn-primary">Get Started <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Intermediate Plan -->
+                <div class="pricing-card popular" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-tier">Intermediate</div>
+                    <div class="pricing-price">PKR 30,000</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Access to Intermediate Courses</li>
+                        <li><i class="fas fa-check"></i> Monthly Updates</li>
+                        <li><i class="fas fa-check"></i> Self-paced Learning</li>
+                        <li><i class="fas fa-check"></i> Certifications Included</li>
+                    </ul>
+                    <div class="money-back">14 Days Money Guarantee</div>
+                    <a href="#" class="btn btn-primary">Get Started <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Advanced Plan -->
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-tier">Advanced</div>
+                    <div class="pricing-price">PKR 40,000</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Access to Advanced Courses</li>
+                        <li><i class="fas fa-check"></i> Monthly Updates</li>
+                        <li><i class="fas fa-check"></i> Support and Community</li>
+                        <li><i class="fas fa-check"></i> Certifications Included</li>
+                    </ul>
+                    <div class="money-back">14 Days Money Guarantee</div>
+                    <a href="#" class="btn btn-primary">Get Started <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-content" data-aos="fade-right">
+                    <div class="section-title">
+                        <h2>About Stellar Skills</h2>
+                    </div>
+                    <p>Empowering Young Minds Through Robotic Education</p>
+                    <div class="about-features">
+                        <div class="about-feature" data-aos="fade-right" data-aos-delay="100">
+                            <div class="feature-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Hands-On Learning</h3>
+                                <p>We offer practical learning where students build and program robots, gaining practical skills for real-world applications.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature" data-aos="fade-right" data-aos-delay="200">
+                            <div class="feature-icon">
+                                <i class="fas fa-atom"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>STEM Focus</h3>
+                                <p>Our curriculum integrates core STEM concepts, fostering teamwork and critical thinking in robotics.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature" data-aos="fade-right" data-aos-delay="300">
+                            <div class="feature-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Robotics Basics</h3>
+                                <p>We teach foundational robotics, covering programming, mechanical design, and automation for beginners.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1478&q=80" alt="Students learning robotics">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision">
+        <div class="container">
+            <div class="vision-content" data-aos="zoom-in">
+                <h2>Our Vision</h2>
+                <p>Empowering Young Minds to Innovate and Create Through Robotic Education</p>
+                <p>To empower young minds with essential STEM and robotics skills, fostering creativity, problem-solving, and innovation to prepare them for success in a rapidly advancing, technology-driven world.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <div class="section-title center">
+                <h2>Our Missions</h2>
+                <p>We are committed to providing transformative robotics education experiences</p>
+            </div>
+            <div class="mission-grid">
+                <div class="mission-card" data-aos="fade-up">
+                    <div class="mission-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Inspiring Curiosity</h3>
+                    <p>We spark curiosity through hands-on robotics, encouraging exploration and discovery in young learners.</p>
+                </div>
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mission-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Promoting Critical Thinking</h3>
+                    <p>Our programs develop problem-solving skills, challenging students to think critically and make informed decisions.</p>
+                </div>
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mission-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Fostering Creativity</h3>
+                    <p>We cultivate creativity by allowing students to design and innovate with robots, transforming ideas into reality.</p>
+                </div>
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mission-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Cultivating Collaboration</h3>
+                    <p>Our mission promotes teamwork by encouraging students to collaborate, share ideas, and solve challenges together.</p>
+                </div>
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="mission-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Building Strong Foundations</h3>
+                    <p>We provide essential skills in robotics, ensuring students build technical and problem-solving skills for the future.</p>
+                </div>
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="mission-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Empowering Future Leaders</h3>
+                    <p>We equip students with leadership skills, preparing them to lead in technology and innovation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Automation Section -->
+    <section class="automation">
+        <div class="container">
+            <div class="section-title">
+                <h2>More About Stellar Skills</h2>
+            </div>
+            <div class="automation-container">
+                <div class="automation-content" data-aos="fade-right">
+                    <p>Stellar Skills offers advanced home automation solutions designed to bring comfort, security, and efficiency to your living space. With easy-to-use smart systems and customized installations, we make your home smarter and your life
+                        easier.</p>
+                    <div class="automation-features">
+                        <div class="automation-feature" data-aos="fade-right" data-aos-delay="100">
+                            <div class="automation-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="automation-content">
+                                <h3>Smart Control Integration</h3>
+                                <p>Seamlessly control lighting, appliances, and climate systems via smartphone apps, voice assistants (like Alexa and Google Home), or custom panels.</p>
+                            </div>
+                        </div>
+                        <div class="automation-feature" data-aos="fade-right" data-aos-delay="200">
+                            <div class="automation-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="automation-content">
+                                <h3>Enhanced Home Security</h3>
+                                <p>Features include smart locks, motion detectors, video doorbells, and 24/7 remote surveillance—all easily accessible through your mobile device.</p>
+                            </div>
+                        </div>
+                        <div class="automation-feature" data-aos="fade-right" data-aos-delay="300">
+                            <div class="automation-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="automation-content">
+                                <h3>Energy Efficiency</h3>
+                                <p>Automated lighting and thermostat controls help reduce energy usage, resulting in lower utility bills while promoting a greener lifestyle.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="automation-image" data-aos="fade-left" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Smart home automation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Gain Flexibility and Mastery with Personalized Learning</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Enhance your skills with expert guidance, and engage in hands-on activities that promote growth and creativity.</p>
+            <div class="cta-buttons center" data-aos="fade-up" data-aos-delay="200">
+                <a href="contact.html" class="btn btn-primary">Contact Us <i class="fas fa-arrow-right"></i></a>
+                <a href="tel:+923265011116" class="btn btn-primary"><i class="fas fa-phone"></i> +92 (326) 5011116</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Stellar Skills</h3>
+                    <p>Empowering young minds through robotics education and innovative home automation solutions since 2021.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                        <li><a href="programs.html"><i class="fas fa-chevron-right"></i> Programs</a></li>
+                        <li><a href="pricing.html"><i class="fas fa-chevron-right"></i> Pricing</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Courses</h3>
+                    <ul>
+                        <li><a href="courses.html#basic"><i class="fas fa-chevron-right"></i> Basic Robotics</a></li>
+                        <li><a href="courses.html#intermediate"><i class="fas fa-chevron-right"></i> Coding Adventures</a></li>
+                        <li><a href="courses.html#advanced"><i class="fas fa-chevron-right"></i> Robo Explorers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Education Street, Tech City</li>
+                        <li><i class="fas fa-phone"></i> +92 (326) 5011116</li>
+                        <li><i class="fas fa-envelope"></i> info@stellarskills.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <p>&copy; 2024 Stellar Skills. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <a href="contact.html" class="floating-cta" title="Get Instant Help">
+        <i class="fas fa-comment-dots"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button id="themeToggle" title="Toggle Dark/Light Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mainNav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+        });
+
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            themeToggle.innerHTML = document.body.classList.contains('light-mode') ?
+                '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+
+            // Update theme in localStorage
+            localStorage.setItem('stellarTheme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+        });
+
+        // Check for saved theme preference
+        if (localStorage.getItem('stellarTheme') === 'light') {
+            document.body.classList.add('light-mode');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+    </script>
+</body>
+
+</html>
